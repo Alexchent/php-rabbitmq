@@ -88,9 +88,9 @@ class Rabbit
         $this->queue->bind($this->exchange->getName(), $routingKey ?? $queueName);
     }
 
-    public function publish($queueName, $message)
+    public function publish($message, $routeKey)
     {
-        $this->exchange->publish($message, $queueName);
+        $this->exchange->publish($message, $routeKey);
     }
 
     public function consume($queueName, $callback, $routingKey = "#")

@@ -6,11 +6,12 @@ composer intsall
 ```
 ### 1、启动一个消费者
 ```
-php demo.php
+php demo_consume.php
 ```
 ### 2. 发送一条消息 
-
-
+```
+php demo_publish.php
+```
 
 ## 安装
 ```
