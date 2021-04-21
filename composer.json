@@ -1,0 +1,35 @@
+{
+    "name": "lib/queue-rabbit",
+    "type": "library",
+    "description": "消息队列",
+    "keywords": ["rabbitmq", "laravel", "amqp"],
+    "authors": [
+        {
+            "name": "alexchen",
+            "email": "1023615292@qq.com"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+      "ext-grpc": "*",
+      "ext-amqp": "*"
+    },
+    "require-dev": {
+      "laravel/framework": "5.8.*"
+    },
+    "autoload": {
+      "psr-4": {
+          "Lib\\Queue\\": "src/"
+      }
+    },
+    "extra": {
+      "laravel": {
+        "providers": [
+          "Lib\\Queue\\QueueServiceProvider"
+        ],
+        "aliases": {
+          "Queue": "Lib\\Queue\\Facade"
+        }
+      }
+    }
+}
